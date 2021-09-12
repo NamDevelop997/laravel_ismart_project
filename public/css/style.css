@@ -1,10 +1,8 @@
 a {
     color: #787272;
+    /* text-decoration: uppercase; */
 }
 
-a:hover {
-    text-decoration: none;
-}
 
 .topnav .navbar-brand {
     width: 15rem;
@@ -84,16 +82,16 @@ ul#sidebar-menu * {
 
 .nav-link {
     display: block;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     position: relative;
 }
 
-.nav-link.active>a,
-.nav-link:hover>li>a {
+.nav-link.active > a,
+.nav-link:hover > li > a {
     color: #0061f2;
 }
 
-.nav-link>li>a>i {
+.nav-link > li > a > i {
     color: #787272;
     font-size: 18px;
 }
@@ -128,7 +126,7 @@ ul#sidebar-menu * {
     vertical-align: middle;
 }
 
-.table-checkall input[type='checkbox'] {
+.table-checkall input[type="checkbox"] {
     cursor: pointer;
 }
 
@@ -136,12 +134,4 @@ ul#sidebar-menu * {
     position: relative;
     padding-right: 5px;
     margin-right: 5px;
-}
-
-.analytic a:not(:last-child):after {
-    position: absolute;
-    content: '|';
-    top: -1px;
-    right: -5px;
-    color: #8c8c8c;
 }

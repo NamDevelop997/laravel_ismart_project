@@ -26,7 +26,7 @@
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="?view=add-post">Thêm bài viết</a>
                         <a class="dropdown-item" href="?view=add-product">Thêm sản phẩm</a>
-                        <a class="dropdown-item" href="?view=list-order">Thêm đơn hàng</a>
+
                     </div>
                 </div>
                 <div class="btn-group">
@@ -112,7 +112,6 @@
                             </div>
                             Dashboard
                         </a>
-                        <i class="arrow fas fa-angle-right"></i>
                     </li>
                     <li class="nav-link">
                         <a href="?view=list-post">
@@ -139,7 +138,6 @@
                         <ul class="sub-menu">
                             <li><a href="?view=add-post">Thêm mới</a></li>
                             <li><a href="?view=list-post">Danh sách</a></li>
-                            <li><a href="?view=cat">Danh mục</a></li>
                         </ul>
                     </li>
                     <li class="nav-link active">
@@ -153,7 +151,6 @@
                         <ul class="sub-menu">
                             <li><a href="?view=add-product">Thêm mới</a></li>
                             <li><a href="?view=list-product">Danh sách</a></li>
-                            <li><a href="?view=cat-product">Danh mục</a></li>
                         </ul>
                     </li>
                     <li class="nav-link">
@@ -179,7 +176,7 @@
 
                         <ul class="sub-menu">
                             <li><a href="{{ url('/dashboard/user/add') }}">Thêm mới</a></li>
-                            <li><a href="?view=list-user">Danh sách</a></li>
+                            <li><a href="{{ url('dashboard/user/list') }}">Danh sách</a></li>
                         </ul>
                     </li>
 

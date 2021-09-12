@@ -4,16 +4,16 @@
 
     <div id="content" class="container-fluid">
         <div class="card">
-            <div class="card-header font-weight-bold">
-                Thêm người dùng
+            <div class="card-header font-weight-bold text-primary">
+                Cập nhập thông tin
             </div>
 
             <div class="card-body">
-                <form method="POST" action="{{ url('/dashboard/user/store') }}">
+                <form method="POST" action="{{ url('/dashboard/user/update', $user->id) }}">
                     @csrf
                     <div class="form-group">
                         <label for="name">Họ và tên</label>
-                        <input class="form-control" type="text" name="name" id="name">
+                        <input class="form-control" type="text" name="name" id="name" value="{{ $user->name }}">
                         @error('name')
                             <small class="text-danger">
                                 {{ $message }}
@@ -22,13 +22,9 @@
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input class="form-control" type="email" name="email" id="email">
-                        @error('email')
-                            <small class="text-danger">
-                                {{ $message }}
+                        <input class="form-control" type="email" name="email" id="email" value="{{ $user->email }}"
+                            disabled>
 
-                            </small>
-                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="password">Mật khẩu</label>
@@ -57,7 +53,7 @@
                         </select>
                     </div>
 
-                    <button type="submit" class="btn btn-primary" name="btn_add" value="add-user">Thêm mới</button>
+                    <button type="submit" class="btn btn-primary" name="btn_edit" value="add-edit">Cập nhật</button>
                 </form>
             </div>
         </div>
